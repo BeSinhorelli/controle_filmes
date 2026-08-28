@@ -1,0 +1,189 @@
+.filme-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.filme-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filme-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.filme-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  flex: 1;
+}
+
+.filme-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-quero-assistir {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-assistindo {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-assistido {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.filme-info {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.filme-info-row {
+  display: flex;
+  padding: 4px 0;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.filme-info-row:last-child {
+  border-bottom: none;
+}
+
+.filme-label {
+  font-weight: 600;
+  color: #4a5568;
+  min-width: 80px;
+  font-size: 14px;
+}
+
+.filme-value {
+  color: #2d3748;
+  font-size: 14px;
+  flex: 1;
+}
+
+.filme-nota {
+  font-weight: 700;
+  color: #667eea;
+}
+
+.filme-sinopse {
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.filme-sinopse .filme-value {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4a5568;
+}
+
+.filme-data {
+  padding-top: 8px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.filme-data .filme-label {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.filme-data .filme-value {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.filme-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-edit,
+.btn-delete {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background: #ebf4ff;
+  color: #3b82f6;
+}
+
+.btn-edit:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .filme-card {
+    padding: 16px;
+  }
+
+  .filme-card-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .filme-titulo {
+    font-size: 18px;
+  }
+
+  .filme-info-row {
+    flex-direction: column;
+    padding: 6px 0;
+  }
+
+  .filme-label {
+    min-width: auto;
+    font-size: 13px;
+  }
+
+  .filme-card-actions {
+    flex-direction: column;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    padding: 10px;
+  }
+}

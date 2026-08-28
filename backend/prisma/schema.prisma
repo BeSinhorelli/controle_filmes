@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Status {
+  QUERO_ASSISTIR
+  ASSISTINDO
+  ASSISTIDO
+}
+
+model Filme {
+  id          Int      @id @default(autoincrement())
+  titulo      String
+  diretor     String
+  genero      String
+  ano         Int
+  nota        Float
+  status      Status
+  sinopse     String
+  createdAt   DateTime @default(now()) @map("created_at")
+  
+  @@map("filmes")
+}

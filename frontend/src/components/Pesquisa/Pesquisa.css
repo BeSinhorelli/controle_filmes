@@ -1,0 +1,76 @@
+.pesquisa-container {
+  flex: 1;
+  min-width: 200px;
+  width: 100%;
+}
+
+.pesquisa-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.pesquisa-wrapper:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.pesquisa-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  color: #a0aec0;
+  pointer-events: none;
+}
+
+.pesquisa-input {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: transparent;
+  color: #2d3748;
+  outline: none;
+}
+
+.pesquisa-input::placeholder {
+  color: #a0aec0;
+  font-size: 15px;
+}
+
+.pesquisa-clear {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pesquisa-clear:hover {
+  color: #718096;
+  background: #f7fafc;
+}
+
+@media (max-width: 768px) {
+  .pesquisa-container {
+    min-width: 100%;
+  }
+
+  .pesquisa-input {
+    font-size: 15px;
+    padding: 11px 40px 11px 40px;
+  }
+}
